@@ -5,8 +5,8 @@ function isDPD_PlaceOrder($object){
 
 class DPD_PlaceOrder extends MVG_SOAPClass{
 	private $_arrVariableMapper = array(
-		"paperFormat" 	=> array(	"mandatory" => true,	"pattern" 	=> "/^[A-Z]{1}(4|6)$/"),
-		"order" 		=> array(	"mandatory" => true,	"array" 	=> "isDPD_Order")
+		"printOptions" 	=> array(	"mandatory" => true,	"array" 	=> "isDPD_PrintOptions"),
+		"order" 		=> array(	"mandatory" => true,	"function" 	=> "isDPD_Order")
 	);
 	
 	function __construct($arrData){
